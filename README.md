@@ -26,8 +26,7 @@ The study uncovers critical phenomena such as the **"Accuracy Paradox"**—where
 ### 1. The Accuracy Paradox
 Under a targeted attack with 6 malicious clients, the system exhibits a dangerous anomaly: Global Accuracy rises to **~80%** (red line) while Recall collapses to **~10%**. The model learns to predict "Safe" for everyone, maximizing accuracy on the imbalanced dataset while failing its primary purpose.
 
-![Accuracy Paradox](results/baseline_untargeted_targeted_comparison_results_mean.png)
-*(Figure: Comparative Analysis of Attack Scenarios under Mean Aggregation)*
+![Comparison Results](results/mean_targeted_attack_3_6_clients/comparison_results_mean.png)
 
 ### 2. Visual Forensics (t-SNE)
 t-SNE visualization reveals how targeted poisoning corrupts the feature space. In the 6-client attack scenario, the minority class (Default - Class 1) is completely absorbed into the majority cluster, destroying the decision boundary.
