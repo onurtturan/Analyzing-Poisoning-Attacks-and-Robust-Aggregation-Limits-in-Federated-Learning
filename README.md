@@ -26,18 +26,13 @@ The study uncovers critical phenomena such as the **"Accuracy Paradox"**—where
 ### 1. The Accuracy Paradox
 Under a targeted attack with 6 malicious clients, the system exhibits a dangerous anomaly: Global Accuracy rises to **~80%** (red line) while Recall collapses to **~10%**. The model learns to predict "Safe" for everyone, maximizing accuracy on the imbalanced dataset while failing its primary purpose.
 
-![Comparison Results](results/mean_targeted_attack_3_6_clients/comparison_results_mean.png)
+![Accuracy Paradox](results/mean_targeted_attack_3_6_clients/comparison_results_mean.png)
+*(Figure: Comparative Analysis of Attack Scenarios under Mean Aggregation)*
 
-### 2. Visual Forensics (t-SNE)
-t-SNE visualization reveals how targeted poisoning corrupts the feature space. In the 6-client attack scenario, the minority class (Default - Class 1) is completely absorbed into the majority cluster, destroying the decision boundary.
-
-![t-SNE](results/tsne_Targeted_6_Clients_mean.jpg)
-*(Figure: Feature Space Distortion under Targeted Attack)*
-
-### 3. Defense Efficacy (FedMedian)
+### 2. Defense Efficacy (FedMedian)
 **FedMedian** successfully filters out malicious updates when attackers are in the minority (30% - Green Line), restoring Recall to baseline levels. However, it collapses when the attacker ratio exceeds the Byzantine tolerance limit (>50% - Red Line).
 
-![Defense Limits](results/targeted_5_7_9_comparison_results_median.png)
+![Defense Limits](results/median_5_7_9/comparison_results_median.png)
 *(Figure: FedMedian Breakdown Point under Majority Attacks)*
 
 ## 🛠️ Installation & Usage
